@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0"/>
+	<link rel="stylesheet" type="text/css" href = ""/>
+	<script>
+		function get_current_year(){
+			  let getYear = new Date();
+			  return getYear.getFullYear();
+			}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Python's Poll App</h1>
+			<p>Voting Machine</p>
+		</div>
+		<div class = "row">
+			<div class="col">
+				<article>
+					<h2>{{ question.question_text }}</h2>
+					<ul>
+						{% for choice in question.choice_set.all %}
+						<li>{{ choice.choice_text }}</li>
+						{% endfor %}
+					</ul>
+					{{ question }}
+				</article>
+			</div>
+		</div>
+		<footer class="mainfooter">
+			<p>Copyright - &#169; - <script>document.write(get_current_year());</script></p>
+		</footer>
+	</div>
+</body>

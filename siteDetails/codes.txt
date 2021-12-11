@@ -1,0 +1,4 @@
+﻿Site Name: MySite
+Admin User: adminfarazhashmi
+Admin Password: tR4563Wq
+Admin Email Address: developerfarazhashmi@yahoo.com

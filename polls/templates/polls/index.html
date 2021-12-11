@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta charset = "UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0"/>
+	<link rel="stylesheet" type="text/css" href = "{% static 'polls/style.css' %}"/>
+	<script>
+		function get_current_year(){
+			  let getYear = new Date();
+			  return getYear.getFullYear();
+			}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Python's Poll App</h1>
+			<p>Voting Machine</p>
+		</div>
+		<div class = "row">
+			<div class="col">
+				<article>
+					{% if latest_question_list %}
+					<ul>
+						{% for qestion in latest_question_list %}
+						<li><a href="/polls/{{question_id}}">{{ qestion.question_text}}/{{qestion.question_id}}</a></li>
+						{% endfor %}
+					</ul>
+					{% else %}
+					<p>No Polls are available.</p>
+					{% endif %}
+				</article>
+			</div>
+			<a href="http://127.0.0.1:8000" target="_blank">Go Home</a>
+		</div>
+		<footer class="mainfooter">
+			<p>Copyright - &#169; - <script>document.write(get_current_year());</script></p>
+		</footer>
+	</div>
+</body>
