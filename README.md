@@ -8,4 +8,3 @@
 ### Django Documentation: https://docs.djangoproject.com/en/
 ### Official Github: https://github.com/
 ### Developer Resume: https://farazhashmi21.github.io/
-
